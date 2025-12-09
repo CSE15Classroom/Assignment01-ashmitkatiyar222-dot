@@ -1,0 +1,99 @@
+<html>
+<head>
+<title>E-commerce Product Card</title>
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;    
+    align-items: center;         
+    background-color: olive;
+    
+  }
+
+  .container {
+    display: flex;
+    gap: 16px; 
+    flex-direction: row; 
+  }
+
+  .card {
+    width: 220px;
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;      
+    align-items: center;         
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  }
+
+  .pimage img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+  }
+
+  .title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 8px;
+  }
+
+  .price {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 12px;
+  }
+
+  .button button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 8px;
+    background-color: olive;
+    color: white;
+    cursor: pointer;
+  }
+
+  .button button:hover {
+    background-color: darkgreen;
+  }
+
+
+  @media (max-width: 768px) {
+    .container {
+      flex-direction: column;
+      align-items: center;
+    }
+  } 
+</style>
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <div class="pimage"><img src="headphone.jpg" alt="Headphone"></div>
+      <div class="title">Headphone</div>
+      <div class="price">$35</div>
+      <div class="button"><button>Add to Cart</button></div>
+    </div>
+
+    <div class="card">
+      <div class="pimage"><img src"" alt="Disc"></div>
+      <div class="title">Disc</div>
+      <div class="price">$35</div>
+      <div class="button"><button>Add to Cart</button></div>
+    </div>
+
+    <div class="card">
+      <div class="pimage"><img src="" alt="Guitar"></div>
+      <div class="title">Guitar</div>
+      <div class="price">$35</div>
+      <div class="button"><button>Add to Cart</button></div>
+    </div>
+  </div>
+</body>
+</html>
