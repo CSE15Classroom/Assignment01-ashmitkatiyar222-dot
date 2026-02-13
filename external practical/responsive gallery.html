@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fixed Grid Layout</title>
+    <style>
+        
+       
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: var(--font-main);
+            background: var(--bg-color);
+            color: var(--primary-color);
+        
+            display: block; 
+        }
+
+        a { text-decoration: none; color: inherit; }
+        ul { list-style: none; }
+
+        
+    
+
+        
+        header { position: sticky; top: 0; z-index: 1000; }
+        nav {
+            background: var(--glass-bg);
+            backdrop-filter: blur(12px);
+            padding: 0 40px;
+            height: 80px;
+            width: 90%;
+            max-width: 1200px;
+            margin: 20px auto;
+            border-radius: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: var(--shadow);
+        }
+        
+        
+        
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            padding: 20px 40px; 
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        
+        .product-card {
+            cursor: pointer; 
+            border: 1px solid #ddd;
+            background-color: #fff;
+            height: 300px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            transition: transform 0.2s; 
+        }
+
+        
+        .product-card img {
+            width: 100%;
+            height: 80%;
+            object-fit: contain;
+            margin-bottom: 5px;
+        }
+
+
+@media (max-width: 1024px) {
+   
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 20px;
+    }
+}
+
+
+@media (max-width: 768px) {
+   
+   
+
+    
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    .product-card {
+        height: 260px;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .product-grid {
+        grid-template-columns: 1fr;
+        padding: 15px;
+    }
+
+    .product-card {
+        height: 240px;
+    }
+
+    .logo {
+        font-size: 1.4rem;
+    }
+}
+
+    </style>
+</head>
+<body>
+
+   
+    <header>
+        <nav>
+        
+            <ul class="nav-links">
+                
+                <li><a href="#">RESPONSIVE GALLERY</a></li>
+            </ul>
+            
+        </nav>
+    </header>
+
+    <main class="product-grid">
+        <div class="product-card"><img src="TOY1.webp" alt="Img 1">1</div>
+        <div class="product-card"><img src="TOY2.webp" alt="Img 2">2</div>
+        <div class="product-card"><img src="TOY3.webp" alt="Img 3">3</div>
+        <div class="product-card"><img src="TOY4.webp" alt="Img 4">4</div>
+        <div class="product-card"><img src="TOY5.webp" alt="Img 5">5</div>
+        <div class="product-card"><img src="TOY6.webp" alt="Img 6">6</div>
+        
+    </main>
+
+</body>
+</html>
